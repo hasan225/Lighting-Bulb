@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+.container{
+    background: rgb(1, 1, 51);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+label {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background: #2a1f94;
+    border-radius: 10px;
+    top: -240px;
+}
+label input{
+    appearance:none;
+}
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: rgb(1, 1, 51);
+    border: 6px solid #2a1f94;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label input:checked ~ span{
+    left: 75px;
+}
+
+span i {
+    font-size: 30px;
+    color: rgb(215, 215, 255);
+    transition:all .5s ease-in-out
+}
+
+label input:checked ~ span i{
+   color:white;
+   filter:drop-shadow(0 0 5px #fff)
+}
+
+div.img {
+    background: url(img/transparent\ bulb.png)no-repeat;
+    position: absolute;
+    top: 80px;
+    left: 75%;
+    transform: translatex(-50%);
+    pointer-events: none;
+    width: 350px;
+    height: 400px;
+    margin-top: 80px;
+}
+
+label input:checked ~ div.img {
+    background: url(img/transparent\ bulb.png)no-repeat;
+    filter: drop-shadow(2px -2px 55px white) brightness(3);
+}
